@@ -8,7 +8,7 @@ public class Palindrome {
 
     String og=u_input.next();
     String revstring="";
-    
+
     for (int i=og.length()-1;i>-1;i--){
         revstring=revstring+og.charAt(i);
     }
@@ -19,6 +19,7 @@ public class Palindrome {
     else{
         System.out.println("its not a palindrome");
     }
+    u_input.close();
 }
 
 }
