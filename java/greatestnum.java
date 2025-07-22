@@ -1,4 +1,6 @@
-public static void main(String[]args) {
+public class greatestnum {
+    public static void main(String[]args) {
+    
     int [] a={40,50,90,40,60};
     int greatest=a[0];
     // System.out.println(greatest);
@@ -9,5 +11,7 @@ public static void main(String[]args) {
     }
 
     System.out.println(greatest);
+
+}
 
 }
