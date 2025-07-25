@@ -1,4 +1,7 @@
--- constraints : rules applied on column
+-- constraints : Definition of Constraints in SQL
+-- Constraints in SQL are rules applied to columns in a table to enforce data integrity — i.e., 
+-- to ensure valid and consistent data.
+
 -- | Constraint             | Description                                                    |
 -- | ---------------------- | -------------------------------------------------------------- |
 -- | **1. PRIMARY KEY**     | Uniquely identifies each record in a table                     |

@@ -1,3 +1,15 @@
+-- DDL – Data Definition Language in SQL
+-- DDL (Data Definition Language) consists of SQL commands used to define, modify, and delete 
+-- the structure of database objects like tables, schemas, indexes, etc.
+
+-- | Command    | Description                                                |
+-- | ---------- | ---------------------------------------------------------- |
+-- | `CREATE`   | Creates a new table, database, index, or view              |
+-- | `ALTER`    | Modifies an existing table (e.g., add/drop/modify columns) |
+-- | `DROP`     | Deletes tables, views, or databases permanently            |
+-- | `TRUNCATE` | Deletes all records from a table but retains its structure |
+-- | `RENAME`   | Renames a table or column (depends on DBMS support)        |
+
 -- to check all databases
 show databases;
 
