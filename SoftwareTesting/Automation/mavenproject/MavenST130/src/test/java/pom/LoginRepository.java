@@ -16,9 +16,11 @@ public class LoginRepository {
 	
 //	repository of methods
 	public void User(String un) {
+		wd.findElement(user).clear();
 		wd.findElement(user).sendKeys(un);;
 	}
 	public void Pass(String pw) {
+		wd.findElement(pass).clear();
 		wd.findElement(pass).sendKeys(pw);;
 	}
 	public void Login() {
