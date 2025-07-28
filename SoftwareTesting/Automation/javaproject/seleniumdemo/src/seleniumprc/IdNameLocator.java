@@ -7,7 +7,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class IdNameLocator {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 		WebDriver wd = new FirefoxDriver();
 		wd.get("https://www.saucedemo.com/v1/");
 		wd.manage().window().maximize();
