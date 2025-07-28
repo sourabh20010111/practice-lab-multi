@@ -9,8 +9,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class Demo2 {
 	static WebDriver wd;
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		 Scanner sc = new Scanner(System.in);
 		 System.out.println("enter the choice");
 		 int ch  = sc.nextInt();
