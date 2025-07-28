@@ -58,9 +58,7 @@ public class DataDrivenFramework {
 			}
 			
 			}
-		
-		
-//		wb.close();
+			
 		fis.close();
 		FileOutputStream fos=new FileOutputStream("C:\\Users\\saura\\Desktop\\data.xlsx");
 		wb.write(fos);
