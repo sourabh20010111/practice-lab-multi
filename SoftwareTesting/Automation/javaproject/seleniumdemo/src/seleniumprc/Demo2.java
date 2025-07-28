@@ -27,7 +27,7 @@ public class Demo2 {
 		 if(wd != null) {
 			 wd.get("https://www.selenium.dev/downloads/");
 		 }
-		 
+		 sc.close();
 	}
 
 }
