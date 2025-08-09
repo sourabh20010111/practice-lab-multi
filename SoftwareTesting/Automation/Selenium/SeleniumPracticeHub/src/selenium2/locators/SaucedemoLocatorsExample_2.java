@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SaucedemoLocatorsExample_1 {
+public class SaucedemoLocatorsExample_2 {
 	 public static void main(String[] args) throws InterruptedException {
 //		 1.WebDriver
 //		 What it is:

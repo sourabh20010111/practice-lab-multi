@@ -1,6 +1,6 @@
 package selenium2.locators;
 
-public class DifferentTypesOfLocators_0 {
+public class DifferentTypesOfLocators_1 {
 		
 //		There are 8 main types of locators you can use in Selenium WebDriver: 
 		
