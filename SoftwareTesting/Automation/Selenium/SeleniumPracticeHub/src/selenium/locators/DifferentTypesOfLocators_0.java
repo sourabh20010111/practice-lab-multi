@@ -26,6 +26,17 @@ public class DifferentTypesOfLocators_0 {
 //		6. Partial Link Text
 //		Description: Finds link by partial match of the link text.
 	
+//	| Feature                 | `linkText`              | `partialLinkText`                    |
+//	| ----------------------- | ----------------------- | ------------------------------------ |
+//	| Match Type              | Exact match             | Contains match                       |
+//	| Case Sensitivity        | Yes                     | Yes                                  |
+//	| Works On `<a>` Tag Only | ✅                      | ✅                                    |
+//	| Speed                   | Slightly faster (exact) | Slightly slower (searches substring) |
+
+//	When to use:
+//  Use linkText when you know the full link text exactly.
+//	Use partialLinkText when the link text is too long or dynamic.
+
 //		7. CSS Selector
 //		Description: Finds element using CSS rules (id, class, attribute, etc.).
 //		Power: Very fast and flexible.
