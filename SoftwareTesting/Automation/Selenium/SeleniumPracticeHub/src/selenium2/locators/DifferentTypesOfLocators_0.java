@@ -1,4 +1,4 @@
-package selenium1.locators;
+package selenium2.locators;
 
 public class DifferentTypesOfLocators_0 {
 		
