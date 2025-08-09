@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class DemoOpenBrowser {
 
 	public static void main(String[] args) throws InterruptedException {
+		
 		WebDriver wd=new FirefoxDriver();// We can open any browser in Selenium using its specific WebDriver implementation.
 //		Each browser needs its own WebDriver.
 //		Chrome → ChromeDriver
