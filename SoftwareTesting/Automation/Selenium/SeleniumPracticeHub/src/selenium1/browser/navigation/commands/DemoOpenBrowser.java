@@ -1,4 +1,4 @@
-package selenium0.browser.navigation.commands;
+package selenium1.browser.navigation.commands;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
