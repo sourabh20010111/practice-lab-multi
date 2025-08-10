@@ -63,8 +63,8 @@ public class DemoQASelectMenuExample {
 //        | Multi-select dropdown                    | `Select` class methods like `selectByIndex()` multiple times |
         
 //        What This Covers:
-//        	Standard dropdown with Select.selectByVisibleText()
-//        	Multi-select dropdown with isMultiple() and multiple selections with Select
+//        	1)Standard dropdown with Select.selectByVisibleText()
+//        	2)Multi-select dropdown with isMultiple() and multiple selections with Select
 //        	Custom React-style dropdown where Select cannot be used—handled with sendKeys() and Enter key
 
 	}
