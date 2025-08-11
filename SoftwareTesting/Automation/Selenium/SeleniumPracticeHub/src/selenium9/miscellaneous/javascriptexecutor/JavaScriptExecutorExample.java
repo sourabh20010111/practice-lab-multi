@@ -31,6 +31,12 @@ public class JavaScriptExecutorExample {
         System.out.println("Page title is: " + title);
 
         driver.quit();
+        
+//        What it does:
+//        	Runs JavaScript code inside the browser.
+//        	Shows an alert popup.
+//        	Retrieves page title using JS.
+//        	Handles alert popup.
 	}
 
 }
