@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Box Model & Layout</title>
+  <style>
+    .box {
+      width: 300px;
+      padding: 20px;
+      border: 5px solid #3498db;
+      margin: 30px auto;
+      box-sizing: border-box;
+      background-color: #ecf0f1;
+      position: relative;
+      top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    This box uses padding, border, margin, and position properties.
+  </div>
+
+<!-- 1. Box Model
+Every HTML element is a rectangular box with these layers (from inside out):
+Content: Text, images, etc.
+Padding: Space between content and border.
+Border: Outline around padding and content.
+Margin: Space outside the border, separates elements. -->
+
+<!-- 2. Width & Height
+Control size of the content box (default): -->
+.box {
+  width: 300px;
+  height: 150px;
+}
+<!-- By default, width and height apply only to content area — padding and border add extra size! -->
+
+<!-- 3. Box-sizing
+Controls whether padding and border are included in the width/height. -->
+.box {
+  box-sizing: content-box; /* default, width/height = content only */
+}
+
+.box-border {
+  box-sizing: border-box;  /* width/height = content + padding + border */
+}
+<!-- Using border-box is recommended for easier sizing. -->
+
+<!-- 4. Display property
+Controls how elements are rendered:
+block — takes full width, starts on new line (e.g., <div>, <p>)
+inline — flows with text, width/height ignored (e.g., <span>, <a>)
+inline-block — inline but allows width/height
+none — hides element -->
+span {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background: lightblue;
+}
+
+<!-- 5. Positioning
+Controls how elements are placed:
+static — default, normal flow
+relative — relative to its normal position
+absolute — positioned relative to nearest positioned ancestor
+fixed — relative to viewport, stays on screen when scrolling
+sticky — toggles between relative and fixed based on scroll -->
+.box {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+<!-- 6. Margin and Padding -->
+.box {
+  margin: 10px 20px;    /* top/bottom 10px, left/right 20px */
+  padding: 15px;        /* space inside */
+}
+
+</body>
+</html>

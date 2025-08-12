@@ -1,0 +1,62 @@
+/* Colors and Backgrounds
+CSS lets you control the colors and backgrounds of HTML elements in multiple ways. */
+
+/* 1. Color Formats
+You can specify colors using: */
+
+/* Color names: */
+/* h1{
+    color: red;
+    color: blue;
+    color: teal;
+} */
+
+/* Hexadecimal (HEX):
+Starts with #, followed by 3 or 6 hex digits (eg:red,teal)*/
+/* h1{
+    color: #FF0000; 
+    color: #008080;  
+} */
+
+/* RGB:
+Specify red, green, blue as numbers from 0 to 255 (eg:red)*/
+/* h1{
+    color: rgb(255, 0, 0);  
+} */
+
+/* RGBA:
+Like RGB but with alpha (opacity) value from 0 (transparent) to 1 (opaque) (eg:semi-transparent red) */
+/* h1{
+    color: rgba(255, 0, 0, 0.5);  
+} */
+
+/* HSL (Hue, Saturation, Lightness): (eg:red) */
+h1{
+    color: hsl(0, 100%, 50%); 
+}
+
+/* 2.Background color
+You can set the background color of elements: */
+/* body {
+  background-color: #ff8956;
+}
+
+p {
+  background-color: yellow;
+} */
+
+
+/* 3. Background image
+Set a background image (pattern or photo): */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url('/frontend-lab/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;  /* fill whole area */
+  background-position: center;
+  
+}
