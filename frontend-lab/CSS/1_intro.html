@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css basics</title>
+    <style>
+    p { color: blue; }
+    </style>
+   <link rel="stylesheet" href="1_external.css" />
+</head>
+<body>
+    <!-- 1: What is CSS and how it works?
+CSS (Cascading Style Sheets) is a language that styles your HTML content.
+It controls colors, fonts, layouts, spacing, and basically how your webpage looks.
+HTML is the structure (like the skeleton), CSS is the design (like the clothes & makeup).
+Browsers read HTML and CSS together to display webpages. -->
+
+    <!-- 2: Ways to apply CSS
+There are three ways to add CSS to your webpage: -->
+<h1>1.Inline CSS — inside an HTML tag</h1>
+<p style="color: red;">Hello inline CSS!</p>
+
+<h1>2.Internal CSS — inside a style tag in the HTML head</h1>
+<p>Hello internal CSS!</p>
+
+<h1>3.External CSS — in a separate .css file linked in HTML</h1> 
+<p>Hello external CSS!</p>
+
+<!-- Best practice: Use external CSS files for clean, maintainable code. -->
+
+<!-- | CSS Type        | Priority (Low to High) |
+     | --------------- | ---------------------- |
+     | Browser default | Lowest                 |
+     | External CSS    | Medium                 |
+     | Internal CSS    | Higher                 |
+     | Inline CSS      | Highest                |
+     | `!important`    | Overrides all          | -->
+
+    <p class="highlight">This is highlighted.</p>
+    <div class="highlight">This div is highlighted too.</div>
+
+    <h1 id="main-title">Main Heading</h1>
+
+
+</body>
+</html>

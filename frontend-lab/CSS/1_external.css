@@ -1,0 +1,40 @@
+p {
+  color: green;
+}
+
+/* CSS Syntax and Selectors
+CSS targets HTML elements using selectors.
+The rule syntax is: 
+selector {
+  property: value;
+} */
+
+/* Tag Selector
+Targets all elements of a specific HTML tag. */
+h1 {
+  color: purple;
+  font-size: 24px;
+}
+/* This means: style all <h1> tags with purple color and font size 24 pixels. */
+
+/* Class Selector
+Targets elements with a specific class attribute.
+Class names start with a dot (.) in CSS.
+You can apply the same class to multiple elements. */
+.highlight {
+  background-color: yellow;
+}
+
+/* ID Selector
+Targets a unique element with an id attribute.
+IDs start with a hash (#) in CSS.
+IDs should be unique per page (one element per id). */
+#main-title {
+  color: red;
+}
+
+/* | Selector Type | CSS Syntax | Applies To                   | Example               |
+   | ------------- | ---------- | ---------------------------- | --------------------- |
+   | Tag           | `tag`      | All elements of a tag        | `p { color: blue; }`  |
+   | Class         | `.class`   | All elements with that class | `.highlight { ... }`  |
+   | ID            | `#id`      | One element with that id     | `#main-title { ... }` | */
