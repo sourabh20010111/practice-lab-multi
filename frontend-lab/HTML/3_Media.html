@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & Multimedia</title>
+</head>
+<body>
+  <h1>Images with Caption</h1>
+  <h2>Use figure and figcaption to add captions under images:</h2>
+<figure>
+  <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2024/08_16_temerario_lancio/_cover634_m.jpg" alt="Sample Image">
+  <figcaption>This is a sample image caption.</figcaption>
+</figure>
+
+<h1>Audio Element</h1>
+<h2>Embed audio files that users can play:</h2>
+<audio controls>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<!-- Why does it appear?
+The browser shows this message only if it cannot play the audio because:
+The audio file URL is missing or incorrect.
+The audio format (type="audio/mpeg") is not supported by your browser.
+You might be testing offline without the actual audio file available.
+The <audio> tag syntax might have an error. -->
+
+<h1>Video Element</h1>
+<h2>Embed videos with controls:</h2>
+<video width="320" height="240" controls>
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h1>Embedding YouTube Videos</h1>
+<h2>Use iframe to embed a YouTube video:</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
+<h1>Embedding Google Maps</h1>
+<h2>Embed a Google map location using iframe:</h2>
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019692173317!2d-122.41941568468155!3d37.77492927975998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c2b0b6163%3A0x8a6b1f0ee80d9d3e!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1615372932654!5m2!1sen!2sin" 
+width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</body>
+</html>

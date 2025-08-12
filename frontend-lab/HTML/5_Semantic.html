@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML & SEO Basics</title>
+    <!-- SEO Basics with HTML
+Use meaningful titles inside <title> tag.
+Use meta description to summarize page content for search engines.
+Use heading tags (<h1> to <h6>) properly to organize content hierarchy.
+Add alt attributes to images for accessibility and SEO. -->
+<meta name="description" content="This website is about web development tutorials.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, tutorials">
+  <meta name="author" content="Sourabh Sonkar">
+
+  <!-- Favicons
+The small icon shown in browser tabs, bookmarks, and mobile home screens.
+Usually a .ico or .png file. -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <!-- 1.What is Semantic HTML?
+Semantic HTML uses meaningful tags that describe the content they contain.
+This helps browsers, search engines, and assistive technologies understand your page better.
+It improves accessibility, SEO, and code readability. -->
+
+    <!-- 2.Common Semantic Tags
+| Tag         | Purpose                                                       |
+| ----------- | ------------------------------------------------------------- |
+| `<header>`  | Introductory content or navigation bar                        |
+| `<nav>`     | Navigation links                                              |
+| `<main>`    | Main content of the page                                      |
+| `<section>` | Thematic grouping of content                                  |
+| `<article>` | Independent, self-contained content (blog post, news article) |
+| `<aside>`   | Content aside from the main content (sidebar, ads)            |
+| `<footer>`  | Footer for section or page                                    | -->
+
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Blog Post Title</h2>
+      <p>Content goes here...</p>
+    </article>
+
+    <aside>
+      <h3>Related Links</h3>
+      <ul>
+        <li><a href="#">Other article</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+
+</body>
+</html>

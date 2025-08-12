@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & User Input</title>
+</head>
+<body>
+    <!-- Basic Form Structure -->
+<form action="/submit" method="post">
+<!-- Input Types -->
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter your name" required>
+<br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="example@mail.com" required>
+<br><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+<br><br>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob">
+<br><br>
+
+<label for="quantity">Quantity:</label>
+<input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+
+<!-- Radio Buttons & Checkboxes -->
+<p>Choose your gender:</p>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
+
+<br><br>
+<p>Select your hobbies:</p>
+<input type="checkbox" id="reading" name="hobby" value="reading">
+<label for="reading">Reading</label>
+
+<input type="checkbox" id="traveling" name="hobby" value="traveling">
+<label for="traveling">Traveling</label>
+
+<!-- Dropdown (Select) & Textarea -->
+<label for="country">Country:</label>
+<select id="country" name="country">
+  <option value="india">India</option>
+  <option value="usa">USA</option>
+  <option value="uk">UK</option>
+</select>
+<br><br>
+
+<label for="message">Your Message:</label>
+<textarea id="message" name="message" rows="4" cols="50" placeholder="Write something..."></textarea>
+
+<!-- Submit Button -->
+<br>
+<button type="submit">Submit</button>
+
+</form>
+    <!-- action = URL where form data will be sent (can be a server or endpoint)
+        method = GET (data in URL) or POST (data in request body) -->
+</body>
+</html>

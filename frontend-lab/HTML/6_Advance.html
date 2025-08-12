@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML</title>
+</head>
+<body>
+    <!-- 1.HTML Entities
+Some characters have special meanings in HTML (like <, >, &) 
+— you can’t just type them directly in content because they might break your code.
+HTML entities are codes that represent these special characters. -->
+<!-- Common entities: -->
+<!-- | Character | Entity Code         | Description          |
+     | --------- | ------------------- | -------------------- |
+     | `<`       | `&lt;`              | Less-than symbol     |
+     | `>`       | `&gt;`              | Greater-than symbol  |
+     | `&`       | `&amp;`             | Ampersand            |
+     | `"`       | `&quot;`            | Double quote         |
+     | `'`       | `&apos;` or `&#39;` | Single quote         |
+     | `©`       | `&copy;`            | Copyright symbol     |
+     | `®`       | `&reg;`             | Registered trademark |
+     | `™`       | `&trade;`           | Trademark symbol     |
+     | ` `       | `&nbsp;`            | Non-breaking space   | -->
+<p>5 &lt; 10 means 5 is less than 10.</p>
+<p>Use &copy; 2025 YourName for copyright.</p>
+
+    <!-- 2.iframes
+iframe embeds another HTML page inside the current page (like YouTube videos or other websites).
+Can specify width, height, border, and more. -->
+<iframe src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2024/08_16_temerario_lancio/_cover634_m.jpg" width="600" height="400" frameborder="0"></iframe>
+
+
+    <!-- 3.SVG (Scalable Vector Graphics)
+XML-based vector image format that can be embedded directly in HTML.
+Great for sharp graphics that scale without losing quality. -->
+ <svg width="200" height="200" style="border:1px solid black;">
+    <circle cx="100" cy="100" r="80" stroke="blue" stroke-width="4" fill="lightblue" />
+  </svg>
+
+    <!-- 4.Canvas Basics
+canvas lets you draw graphics dynamically with JavaScript.
+It’s a blank area defined by width and height that you can draw shapes, images, text, etc. -->
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+  Your browser does not support the canvas element.
+</canvas>
+
+<!-- What is the canvas tag?
+The canvas element is an HTML container you can draw on using JavaScript.
+It provides a bitmap area (a blank “drawing board”) where you can programmatically create shapes, 
+graphics, animations, games, charts, and more.
+It does not create its own visual content by itself; you need JavaScript to draw inside it. -->
+
+<!-- Difference from SVG
+canvas is pixel-based (raster graphics), meaning you draw pixels on a grid.
+SVG is vector-based, meaning you define shapes mathematically and they scale cleanly.
+Canvas is great for fast, dynamic graphics and games. SVG is better for static or scalable images. -->
+
+
+</body>
+</html>
