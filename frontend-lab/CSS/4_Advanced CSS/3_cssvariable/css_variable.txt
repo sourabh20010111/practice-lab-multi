@@ -1,0 +1,27 @@
+:root {
+  --main-color: #3498db;
+  --text-color: white;
+  --padding: 15px;
+}
+
+button {
+  background: var(--main-color);
+  color: var(--text-color);
+  padding: var(--padding);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2980b9; /* Darker shade */
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+How it works:
+:root → The highest-level scope, so variables are global.
+--main-color → Variable name.
+var(--main-color) → Calling the variable.
+
+--------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hamburger icon (hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Responsive - Tablet & Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    overflow: hidden;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .nav-links.show {
+    padding: 10px;
+    max-height: 300px; /* enough to fit links */
+    opacity: 1;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">MySite</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+
+<!-- What Changed
+Used max-height + opacity transition for a smooth drop-down effect.
+Hidden menu: max-height: 0; opacity: 0;
+Visible menu: max-height: 300px; opacity: 1;
+Transition speed: 0.3s ease for a smooth feel. -->
+</body>
+</html>

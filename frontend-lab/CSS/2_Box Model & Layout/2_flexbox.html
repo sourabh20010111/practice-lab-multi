@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Basics</title>
+    <style>
+        .container {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-items: center;
+         height: 150px;
+         background-color: #ddd;
+        }
+
+       .box {
+         background-color: #3498db;
+         color: white;
+         padding: 20px;
+         border-radius: 5px;
+         flex-grow: 1;
+         margin: 0 5px;
+         text-align: center;
+         border-radius: 5px;
+       }
+    </style>
+</head>
+<body>
+<!-- 1. What is Flexbox?
+Flexbox (Flexible Box) lets you arrange items in a row or column, 
+control their size, spacing, and alignment easily — even when the container size changes (responsive!). -->
+
+<!-- 2. Container & Items
+You make a container a flex container by setting: -->
+.container {
+  display: flex;
+}
+<!-- All direct children of .container become flex items. -->
+
+<!-- 3. Main Axis & Cross Axis
+By default, flex items lay out in a row (main axis is horizontal).
+Cross axis is vertical.
+You can change direction with flex-direction. -->
+
+<!-- 4. Key Properties for Container -->
+<!-- | Property          | Description                  | Example                                     |
+     | ----------------- | ---------------------------- | ------------------------------------------- |
+     | `flex-direction`  | Row or column layout         | `row` (default), `column`                   |
+     | `justify-content` | Align items along main axis  | `flex-start`, `center`, `space-between`     |
+     | `align-items`     | Align items along cross axis | `stretch` (default), `center`, `flex-start` | -->
+    
+<!-- 5. example -->
+ <div class="container">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
+
+<!-- 6. Flex Items Grow/Shrink
+Use flex-grow to allow items to grow and fill space. -->
+
+
+<!-- css code added above in style tag -->
+</body>
+</html>

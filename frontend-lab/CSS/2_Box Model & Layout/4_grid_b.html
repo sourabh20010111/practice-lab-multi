@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Basics</title>
+    <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 100px 100px;
+      gap: 10px;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+    .box {
+      background-color: #3498db;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+    .box1 {
+      grid-column: 1 / 3; /* spans two columns */
+    }
+  </style>
+</head>
+<body>
+<!-- 1. What is CSS Grid?
+CSS Grid lets you:
+Create complex page layouts without floats or positioning hacks.
+Align items into a clean row/column structure.
+Control both horizontal and vertical spacing with ease. -->
+
+<!-- 2. Basic Syntax -->
+.container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 100px 100px;
+}
+<!-- grid-template-columns → defines the column widths.
+grid-template-rows → defines the row heights. -->
+
+<!-- 3. Repeat & Auto-fit
+Instead of repeating 200px 200px 200px, you can write: -->
+grid-template-columns: repeat(3, 200px);
+<!-- Or for responsive sizing: -->
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+<!-- 4. Gap Between Items -->
+gap: 10px; /* shorthand for row-gap and column-gap */
+
+<!-- 5. Placing Items
+You can position items using: -->
+.item1 {
+  grid-column: 1 / 3; /* spans from col 1 to col 3 */
+  grid-row: 1 / 2;    /* spans row 1 */
+}
+
+<!-- Example: Simple Grid -->
+<div class="container">
+    <div class="box box1">Box 1 (Wide)</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box">Box 5</div>
+  </div>
+</body>
+</html>

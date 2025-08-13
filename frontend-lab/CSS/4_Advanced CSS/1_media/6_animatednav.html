@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger to X animation */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Animation for menu */
+@keyframes fadeSlideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+  .nav-links.show {
+    display: flex;
+    animation: fadeSlideDown 0.4s ease forwards;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">MySite</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  let menu = document.getElementById("navLinks");
+  let burger = document.getElementById("hamburger");
+
+  menu.classList.toggle("show");
+  burger.classList.toggle("active");
+}
+</script>
+<!-- Changes from Previous Version
+When menu opens:
+First bar rotates 45°.
+Second bar fades out.
+Third bar rotates -45°.
+When menu closes:
+Bars revert to original hamburger.
+Smooth transitions using transition: all 0.3s ease. -->
+</body>
+</html>

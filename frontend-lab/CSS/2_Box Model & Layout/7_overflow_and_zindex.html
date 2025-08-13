@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow & Z-Index Demo</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #333;
+    }
+
+    /* ------------------- OVERFLOW ------------------- */
+    .overflow-box {
+      width: 300px;
+      height: 120px;
+      border: 2px solid #ccc;
+      margin-bottom: 20px;
+      padding: 10px;
+      background: white;
+    }
+    .content {
+      background: #dbeafe;
+      padding: 8px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .scroll { overflow: scroll; }
+    .hidden { overflow: hidden; }
+    .visible { overflow: visible; }
+    .auto { overflow: auto; }
+
+    /* ------------------- Z-INDEX ------------------- */
+    .z-container {
+      position: relative;
+      width: 400px;
+      height: 200px;
+      border: 2px dashed #bbb;
+      margin-top: 20px;
+      background: white;
+    }
+    .layer {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    .layer1 {
+      background: #2563eb;
+      z-index: 1; /* lower layer */
+    }
+    .layer2 {
+      background: #f97316;
+      top: 40px;
+      left: 60px;
+      z-index: 2; /* higher layer */
+    }
+    .layer3 {
+      background: #16a34a;
+      top: 60px;
+      left: 100px;
+      z-index: 3; /* highest layer */
+    }
+  </style>
+</head>
+<body>
+    <!-- OVERFLOW DEMO -->
+  <h2>Overflow Examples</h2>
+  <p><strong>overflow: visible</strong> (default) — content spills out.</p>
+  <div class="overflow-box visible">
+    <div class="content">
+      This text will overflow and show outside the box because <code>overflow: visible</code> is set.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    </div>
+  </div>
+
+  <p><strong>overflow: hidden</strong> — extra content is clipped.</p>
+  <div class="overflow-box hidden">
+    <div class="content">
+      This text is clipped when it goes beyond the box. You can't scroll to see it.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+  </div>
+
+  <p><strong>overflow: scroll</strong> — scrollbars always visible.</p>
+  <div class="overflow-box scroll">
+    <div class="content">
+      This box always has scrollbars, even if not needed.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut ipsum eget velit dictum euismod.
+    </div>
+  </div>
+
+  <p><strong>overflow: auto</strong> — scrollbars appear only if needed.</p>
+  <div class="overflow-box auto">
+    <div class="content">
+      This box only shows scrollbars when content overflows.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut ipsum eget velit dictum euismod.
+    </div>
+  </div>
+
+  <!-- Z-INDEX DEMO -->
+  <h2>Z-Index Example</h2>
+  <p>
+    Each colored box has a different <code>z-index</code>. Higher z-index values appear on top.
+  </p>
+  <div class="z-container">
+    <div class="layer layer1">z-index: 1</div>
+    <div class="layer layer2">z-index: 2</div>
+    <div class="layer layer3">z-index: 3</div>
+  </div>
+<!-- How to Test
+1.Overflow:
+Look at each box.
+visible: Content spills outside boundaries.
+hidden: Cuts off extra content.
+scroll: Always has scrollbars.
+auto: Only shows scrollbars if text is too big.
+
+2.Z-Index:
+Blue (z-index: 1) is behind orange (z-index: 2), which is behind green (z-index: 3).
+Try changing values to see how order changes.
+If no position is set (relative, absolute, fixed, sticky), z-index won’t work. -->
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  font-size: 48px;
+  color: darkblue;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 36px;
+    color: darkgreen;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    color: darkred;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- 1. What media queries are & why we use them
+
+2. Syntax of @media:
+@media (condition) {
+  /* CSS rules that apply only when condition is true */
+}
+
+3. Common breakpoints (mobile, tablet, desktop)
+Common Breakpoints:
+| Device Type  | Width Range      |
+| ------------ | ---------------- |
+| Mobile       | up to 600px      |
+| Tablet       | 601px – 900px    |
+| Small Laptop | 901px – 1200px   |
+| Desktop      | 1201px and above |
+
+4. Example — making a layout change on smaller screens
+5. Pro tips for writing responsive CSS -->
+
+
+<!-- What are Media Queries?
+Media queries let you apply CSS rules only under certain conditions, like screen width, device orientation, or resolution.
+They’re the main tool for responsive design, making your site look good on mobile, tablet, and desktop. -->
+
+<h1>Hello, World!</h1>
+
+<!-- How it works:
+Desktop → Large blue text
+Tablet → Medium green text
+Mobile → Small red text -->
+</body>
+</html>

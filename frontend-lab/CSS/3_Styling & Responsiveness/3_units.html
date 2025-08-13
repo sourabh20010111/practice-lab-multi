@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Units Demo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    font-size: 16px; /* This is our base font size */
+  }
+
+  /* px: Fixed size, doesn't depend on anything */
+  .px-box {
+    background: lightblue;
+    width: 200px;
+    height: 100px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* %: Relative to parent container */
+  .percent-box {
+    background: lightgreen;
+    width: 50%; /* Half of the parent width */
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  /* em: Relative to the font size of the element's parent */
+  .em-parent {
+    font-size: 20px; /* Parent font size */
+    background: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .em-child {
+    background: orange;
+    font-size: 2em; /* 2 × parent font size (20px) = 40px */
+    padding: 10px;
+  }
+
+  /* rem: Relative to the root element (html) font size */
+  html {
+    font-size: 16px; /* Root size */
+  }
+  .rem-box {
+    background: pink;
+    font-size: 2rem; /* 2 × root size = 32px */
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+<h1>CSS Units: px | % | em | rem</h1>
+
+<div class="px-box">200px wide box</div>
+
+<div class="percent-box">50% width box</div>
+
+<div class="em-parent">
+  Parent font-size: 20px
+  <div class="em-child">2em = 40px text</div>
+</div>
+
+<div class="rem-box">2rem = 32px text (always based on root)</div>
+
+<!-- How to remember:
+px → fixed, absolute size
+% → relative to parent size
+em → relative to parent’s font-size
+rem → relative to root (HTML) font-size -->
+</body>
+</html>

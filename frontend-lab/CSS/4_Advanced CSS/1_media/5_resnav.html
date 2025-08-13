@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Animation keyframes */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+    animation: fadeSlideDown 0.4s ease forwards;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">MySite</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  let menu = document.getElementById("navLinks");
+  menu.classList.toggle("show");
+}
+</script>
+
+<!-- How It Works
+@keyframes fadeSlideDown — fades the menu in while sliding it down from above.
+When the .show class is added, the menu:
+Changes from display: none → display: flex
+Runs the animation for 0.4s
+Works perfectly for mobile & tablet sizes. -->
+
+
+</body>
+</html>

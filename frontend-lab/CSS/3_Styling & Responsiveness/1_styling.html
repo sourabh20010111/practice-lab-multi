@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lists & Tables Styling</title>
+<style>
+  /* ---------- LISTS ---------- */
+  .custom-list {
+    list-style-type: none; /* remove bullets */
+    padding: 0;
+  }
+
+  .custom-list li {
+    background: lightblue;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .custom-ol {
+    list-style-type: upper-roman; /* I, II, III */
+    padding-left: 20px;
+  }
+
+  .custom-ol li {
+    background: lightgreen;
+    margin: 5px 0;
+    padding: 10px;
+  }
+
+  /* ---------- TABLE ---------- */
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse; /* removes double borders */
+    margin-top: 20px;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .custom-table th {
+    background-color: #444;
+    color: white;
+  }
+
+  .custom-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* zebra stripes */
+  }
+
+  .custom-table tr:hover {
+    background-color: #ddd; /* hover effect */
+  }
+</style>
+</head>
+<body>
+
+<h2>Styled Unordered List</h2>
+<ul class="custom-list">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+
+<h2>Styled Ordered List</h2>
+<ol class="custom-ol">
+  <li>Frontend</li>
+  <li>Backend</li>
+  <li>Database</li>
+</ol>
+
+<h2>Styled Table</h2>
+<table class="custom-table">
+  <tr>
+    <th>Name</th>
+    <th>Role</th>
+    <th>Location</th>
+  </tr>
+  <tr>
+    <td>Sourabh</td>
+    <td>Tester</td>
+    <td>India</td>
+  </tr>
+  <tr>
+    <td>Amit</td>
+    <td>Developer</td>
+    <td>USA</td>
+  </tr>
+</table>
+
+<!-- This example covers:
+Removing default list bullets
+Custom list markers
+Table borders, zebra stripes, and hover effects -->
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger to X animation */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Animation keyframes */
+@keyframes fadeSlideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+    animation: fadeSlideDown 0.4s ease forwards;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+</style>
+</head>
+<body>
+<!-- Hamburger → X animation
+Smooth dropdown animation on mobile
+Works on desktop, tablet, and mobile -->
+<div class="navbar">
+  <div class="logo">MySite</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  let menu = document.getElementById("navLinks");
+  let burger = document.getElementById("hamburger");
+
+  menu.classList.toggle("show");
+  burger.classList.toggle("active");
+}
+</script>
+<!-- This version:
+Makes the hamburger transform into an X when clicked.
+Smoothly slides down the menu on mobile.
+Hover effects for better UX.
+Fully responsive. -->
+</body>
+</html>

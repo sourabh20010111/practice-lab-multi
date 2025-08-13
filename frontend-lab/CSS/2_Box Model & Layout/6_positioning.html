@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+    /* Base styles for clarity */
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, Arial, sans-serif; line-height: 1.5; }
+    .page { padding: 24px; }
+    h1 { margin-bottom: 8px; }
+    .note { color: #555; margin-bottom: 24px; }
+
+    /* Section wrapper (so each step is visually separated) */
+    .section {
+      border: 2px dashed #bbb;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 24px 0;
+      background: #fafafa;
+    }
+    .label {
+      display: inline-block;
+      font-weight: 700;
+      margin-bottom: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eef;
+    }
+
+    /* A generic container to show boundaries */
+    .container {
+      border: 2px solid #ddd;
+      background: #fff;
+      padding: 12px;
+      min-height: 120px;
+      position: relative; /* used in absolute step */
+    }
+
+    /* Demo boxes */
+    .box {
+      background: #4c8bf5;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .ghost {
+      background: #e9f0ff;
+      color: #355;
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-left: 8px;
+    }
+
+    /* Step 2: Relative */
+    .relative-box {
+      position: relative;   /* take normal space, then shift visually */
+      top: 20px;
+      left: 30px;
+    }
+
+    /* Step 3: Absolute */
+    .abs-parent {
+      /* already has position: relative via .container */
+      height: 160px; /* so we can see the child pin inside */
+      background: #fff7ec;
+    }
+    .abs-child {
+      position: absolute;  /* positioned against nearest positioned ancestor (.container) */
+      bottom: 12px;
+      right: 12px;
+      background: #ff7f50;
+    }
+
+    /* Step 4: Fixed */
+    .fixed-btn {
+      position: fixed;      /* relative to viewport */
+      right: 16px;
+      bottom: 16px;
+      background: #16a34a;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Step 5: Sticky */
+    .sticky-header {
+      position: sticky;  /* sticks when scrolled to top edge */
+      top: 0;
+      background: #f59e0b;
+      color: #111;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      z-index: 1;        /* ensure it stays above section content */
+      margin-bottom: 12px;
+    }
+
+    /* Some tall filler to make scrolling obvious in fixed & sticky steps */
+    .tall {
+      height: 600px;
+      background: repeating-linear-gradient(
+        180deg,
+        #fff,
+        #fff 40px,
+        #f6f6f6 40px,
+        #f6f6f6 80px
+      );
+      border-radius: 8px;
+      padding: 12px;
+    }
+  </style>
+</head>
+<body>
+<!-- 1. Static Position (default)
+Every element is position: static; by default.
+Follows the normal HTML flow (no manual placement). -->
+div {
+  position: static; /* default */
+}
+
+<!-- 2. Relative Position
+Moves the element relative to its normal position.
+Doesn’t affect surrounding elements’ layout space. -->
+.box {
+  position: relative;
+  top: 20px;   /* move down */
+  left: 10px;  /* move right */
+}
+
+<!-- 3. Absolute Position
+Places the element relative to the nearest positioned ancestor (not static).
+If no ancestor is positioned, it’s relative to the <html> document. -->
+.parent {
+  position: relative; /* key for absolute children */
+}
+.child {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+<!-- 4. Fixed Position
+Always stays in the same place relative to the viewport (browser window).
+Does not move when scrolling. -->
+.fixed-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  color: white;
+  padding: 10px;
+}
+
+<!-- 5. Sticky Position
+Acts like relative until it reaches a certain scroll position, then sticks.
+Useful for sticky headers. -->
+header {
+  position: sticky;
+  top: 0;
+  background: yellow;
+}
+
+<!-- Example -->
+ <div class="page">
+    <h1>CSS Positioning — Step by Step</h1>
+    <p class="note">
+      Follow the steps below. Read the label, then observe how each positioning mode behaves.
+    </p>
+
+    <!-- STEP 1: STATIC -->
+    <div class="section">
+      <span class="label">Step 1 — Static (default)</span>
+      <p>Elements are in normal document flow. No manual offsets apply.</p>
+      <div class="container">
+        <span class="box">I am static (default)</span>
+        <span class="ghost">Next inline content</span>
+      </div>
+    </div>
+
+    <!-- STEP 2: RELATIVE -->
+    <div class="section">
+      <span class="label">Step 2 — Relative</span>
+      <p>
+        The element keeps its original space, but is shifted visually using
+        <code>top/left</code>. Notice the gap where it “would have been”.
+      </p>
+      <div class="container">
+        <span class="box relative-box">I am relative (shifted)</span>
+        <span class="ghost">I still sit where the blue box originally reserved space</span>
+      </div>
+    </div>
+
+    <!-- STEP 3: ABSOLUTE -->
+    <div class="section">
+      <span class="label">Step 3 — Absolute (inside positioned parent)</span>
+      <p>
+        The orange box is <code>position: absolute</code> and pinned to the bottom-right
+        of the gray-bordered container (its nearest ancestor with <code>position: relative</code>).
+      </p>
+      <div class="container abs-parent">
+        <span class="ghost">Other content in the parent…</span>
+        <span class="box abs-child">I’m absolute • bottom-right</span>
+      </div>
+    </div>
+
+    <!-- STEP 4: FIXED -->
+    <div class="section">
+      <span class="label">Step 4 — Fixed (relative to viewport)</span>
+      <p>
+        The green “Help” button is <code>position: fixed</code>. Scroll the page —
+        it stays glued to the bottom-right of the window.
+      </p>
+      <div class="tall">Scroll inside the page to see the fixed button stay put.</div>
+    </div>
+
+    <!-- STEP 5: STICKY -->
+    <div class="section">
+      <span class="label">Step 5 — Sticky (sticks after crossing top)</span>
+      <p>
+        The yellow header below is <code>position: sticky</code>. It behaves like
+        relative until it reaches the top edge, then it sticks there while this
+        section scrolls past.
+      </p>
+      <div class="sticky-header">I stick to the top when you scroll me here</div>
+      <div class="tall">Keep scrolling to see the sticky behavior.</div>
+    </div>
+  </div>
+
+  <!-- Fixed button lives once for the whole page -->
+  <a class="fixed-btn" href="#">Help</a>
+
+<!-- What to observe (quick checklist)
+Static: Blue box sits naturally with inline content beside it.
+Relative: Blue box moves down/right, but the original space remains (the pale “ghost” shows where it was).
+Absolute: Orange box pins to the parent’s bottom-right corner and ignores normal flow.
+Fixed: Green button stays in the window corner while you scroll.
+Sticky: Yellow bar scrolls normally, then sticks to the top after reaching it. -->
+</body>
+</html>

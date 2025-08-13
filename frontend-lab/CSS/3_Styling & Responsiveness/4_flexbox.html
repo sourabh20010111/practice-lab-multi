@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Playground</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f4f4f4;
+  }
+
+  .controls {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .flex-container {
+    display: flex;
+    background: lightgray;
+    padding: 10px;
+    height: 300px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .flex-item {
+    background: tomato;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 6px;
+    flex: 0 1 auto; /* flex-grow | flex-shrink | flex-basis */
+  }
+
+  select {
+    padding: 5px;
+    margin: 5px 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<h2>🎯 Flexbox Playground</h2>
+
+<div class="controls">
+  <label>flex-direction:</label>
+  <select id="direction">
+    <option>row</option>
+    <option>row-reverse</option>
+    <option>column</option>
+    <option>column-reverse</option>
+  </select>
+
+  <label>justify-content:</label>
+  <select id="justify">
+    <option>flex-start</option>
+    <option>flex-end</option>
+    <option>center</option>
+    <option>space-between</option>
+    <option>space-around</option>
+    <option>space-evenly</option>
+  </select>
+
+  <label>align-items:</label>
+  <select id="align">
+    <option>stretch</option>
+    <option>flex-start</option>
+    <option>flex-end</option>
+    <option>center</option>
+    <option>baseline</option>
+  </select>
+
+  <label>flex-wrap:</label>
+  <select id="wrap">
+    <option>nowrap</option>
+    <option>wrap</option>
+    <option>wrap-reverse</option>
+  </select>
+</div>
+
+<div class="flex-container" id="container">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+  <div class="flex-item">4</div>
+  <div class="flex-item">5</div>
+</div>
+
+<script>
+  const container = document.getElementById('container');
+  document.getElementById('direction').onchange = e => container.style.flexDirection = e.target.value;
+  document.getElementById('justify').onchange = e => container.style.justifyContent = e.target.value;
+  document.getElementById('align').onchange = e => container.style.alignItems = e.target.value;
+  document.getElementById('wrap').onchange = e => container.style.flexWrap = e.target.value;
+</script>
+
+</body>
+</html>

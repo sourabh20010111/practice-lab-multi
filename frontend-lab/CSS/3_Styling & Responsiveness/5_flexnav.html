@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Navbar</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  nav {
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: yellow;
+  }
+
+  /* Responsive for small screens */
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">MySite</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<!-- What you’ll learn here:
+display: flex for horizontal alignment.
+justify-content: space-between to separate logo & links.
+gap to space items evenly.
+flex-wrap + media queries for mobile-friendly design. -->
+</body>
+</html>

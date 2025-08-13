@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 250px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+  animation: glow 1.5s infinite alternate;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0;
+}
+
+.card-content p {
+  color: #555;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% { box-shadow: 0 12px 20px rgba(0,0,0,0.2); }
+  100% { box-shadow: 0 12px 30px rgba(46,204,113,0.6); }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <img src="/images/bg.jpg" alt="Sample Image">
+  <div class="card-content">
+    <h3>Animated Card</h3>
+    <p>This card grows, moves, and glows on hover.</p>
+  </div>
+</div>
+<!-- How it Works
+Transition → Makes the movement (transform) and shadow changes smooth.
+@keyframes glow → Creates a glowing pulse effect on hover.
+Hover State → Applies both the transition and animation for a richer effect. -->
+</body>
+</html>

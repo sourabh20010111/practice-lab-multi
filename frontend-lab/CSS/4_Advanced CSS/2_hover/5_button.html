@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background: #1e1e1e;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main button styles */
+button {
+  position: relative;
+  background: #3498db;
+  color: white;
+  padding: 15px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Hover scaling */
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Pseudo-element glow */
+button::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000, #ffff00);
+  background-size: 400%;
+  border-radius: 50px;
+  z-index: -1;
+  animation: glow 5s linear infinite;
+}
+
+/* Keyframes for glowing gradient */
+@keyframes glow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+</head>
+<body>
+
+<!-- A button that:
+Has smooth hover transitions
+Glows with animation
+Uses a ::before pseudo-element for an extra effect -->
+
+<button>Glowing Button</button>
+
+<!-- How It Works
+Transition → Button smoothly grows on hover.
+Pseudo-element (::before) → Adds a glowing border without extra HTML.
+Keyframe animation → Moves gradient background for glow effect.
+overflow: hidden → Keeps glow behind button text. -->
+</body>
+</html>

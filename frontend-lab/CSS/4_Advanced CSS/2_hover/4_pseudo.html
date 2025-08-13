@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+button {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Pseudo-class */
+button:hover {
+  background: #2ecc71;
+}
+
+/* Pseudo-elements */
+button::before {
+  content: "-> ";
+}
+button::after {
+  content: " <-";
+}
+</style>
+</head>
+<body>
+
+<button>Click Me</button>
+
+<!-- 1.Pseudo-classes
+They target an element’s state (hovered, focused, visited, etc.). -->
+
+<!-- a:hover {
+  color: red; /* when mouse hovers */
+}
+
+input:focus {
+  border: 2px solid blue; /* when clicked into */
+}
+
+li:first-child {
+  color: green; /* first list item only */
+} -->
+
+<!-- Common ones:
+:hover → When mouse is over the element.
+:focus → When element is active for typing.
+:first-child, :last-child
+:nth-child(odd/even/number) -->
+
+<!-- 2.Pseudo-elements
+They create virtual elements you can style without adding HTML tags. -->
+
+<!-- p::first-letter {
+  font-size: 2em; /* makes first letter big */
+  color: red;
+}
+
+p::first-line {
+  font-weight: bold; /* first line bold */
+}
+
+button::before {
+  content: "🔥 ";
+}
+
+button::after {
+  content: " 💡";
+} -->
+
+<!-- Common ones:
+::before — inserts content before element.
+::after — inserts content after element.
+::first-letter
+::first-line -->
+
+
+</body>
+</html>

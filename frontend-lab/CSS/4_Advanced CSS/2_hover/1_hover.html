@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+button {
+  background-color: #3498db; /* Blue */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  /* Transition magic */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #2ecc71; /* Green */
+  transform: scale(1.1); /* Slight zoom */
+}
+</style>
+</head>
+<body>
+
+<button>Hover Me</button>
+<!-- What’s Happening
+transition says: When these properties change, animate them.
+We are animating:
+background-color → 0.3 seconds
+transform → 0.3 seconds
+ease makes it start slow, go fast, then slow again.
+On hover → Color changes & button grows slightly. -->
+</body>
+</html>

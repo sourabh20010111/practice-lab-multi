@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* The box we animate */
+.box {
+  background: #3498db;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-size: 20px;
+  
+  /* Start invisible & shifted left */
+  opacity: 0;
+  transform: translateX(-50px);
+
+  /* Animation */
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  Welcome to the Website! 
+</div>
+<!-- How It Works
+Initial State → opacity: 0 (invisible) & translateX(-50px) (shifted left).
+@keyframes fadeSlideIn → Gradually sets opacity: 1 and moves it into place.
+animation: ... forwards → Ensures it stays in the final position after finishing.
+ease-out → Starts fast, ends slow for a natural feel. -->
+
+
+
+<!-- CSS Animations Cheat Sheet -->
+
+<!-- **1. Fade In**
+
+```css
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+**2. Slide In (Left)**
+
+```css
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+
+**3. Bounce**
+
+```css
+.bounce {
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-20px); }
+  60% { transform: translateY(-10px); }
+}
+
+**4. Spin**
+
+```css
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+**5. Pulse**
+
+```css
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+**How to Use:**
+
+<div class="fade-in">Hello</div>
+<div class="slide-in-left">Welcome</div>
+<button class="bounce">Click Me</button> -->
+
+</body>
+</html>

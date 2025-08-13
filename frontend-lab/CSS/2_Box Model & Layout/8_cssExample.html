@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CSS Positioning, Overflow & Z-Index Playground</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+  }
+  h2 {
+    margin-top: 40px;
+    color: #333;
+  }
+  .demo-container {
+    border: 2px dashed #bbb;
+    padding: 20px;
+    background: white;
+    margin-bottom: 30px;
+    height: 200px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+
+  /* POSITIONING */
+  .relative {
+    position: relative;
+    background: #f97316;
+  }
+  .absolute {
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    background: #16a34a;
+  }
+
+  /* OVERFLOW BOX */
+  .overflow-box {
+    width: 300px;
+    height: 120px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: white;
+  }
+  .content {
+    background: #dbeafe;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .scroll { overflow: scroll; }
+  .hidden { overflow: hidden; }
+  .visible { overflow: visible; }
+  .auto { overflow: auto; }
+
+  /* Z-INDEX */
+  .z-container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 2px dashed #bbb;
+    margin-top: 20px;
+    background: white;
+  }
+  .layer {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  .layer1 { background: #2563eb; z-index: 1; }
+  .layer2 { background: #f97316; top: 40px; left: 60px; z-index: 2; }
+  .layer3 { background: #16a34a; top: 60px; left: 100px; z-index: 3; }
+</style>
+</head>
+<body>
+
+<h1>CSS Playground: Positioning, Overflow & Z-Index</h1>
+
+<!-- STATIC -->
+<h2>1. Static Position (default)</h2>
+<div class="demo-container">
+  <div class="box">Static</div>
+</div>
+
+<!-- RELATIVE -->
+<h2>2. Relative Position</h2>
+<div class="demo-container">
+  <div class="box relative">Relative</div>
+</div>
+
+<!-- ABSOLUTE -->
+<h2>3. Absolute Position (inside relative parent)</h2>
+<div class="demo-container" style="position: relative;">
+  <div class="box">Static</div>
+  <div class="box absolute">Absolute</div>
+</div>
+
+<!-- OVERFLOW -->
+<h2>4. Overflow Examples</h2>
+<p><strong>overflow: visible</strong> — content spills out.</p>
+<div class="overflow-box visible">
+  <div class="content">
+    This text will overflow and show outside the box because <code>overflow: visible</code> is set.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </div>
+</div>
+
+<p><strong>overflow: hidden</strong> — extra content is clipped.</p>
+<div class="overflow-box hidden">
+  <div class="content">
+    This text is clipped when it goes beyond the box. You can't scroll to see it.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </div>
+</div>
+
+<p><strong>overflow: scroll</strong> — scrollbars always visible.</p>
+<div class="overflow-box scroll">
+  <div class="content">
+    This box always has scrollbars, even if not needed.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut ipsum eget velit dictum euismod.
+  </div>
+</div>
+
+<p><strong>overflow: auto</strong> — scrollbars appear only if needed.</p>
+<div class="overflow-box auto">
+  <div class="content">
+    This box only shows scrollbars when content overflows.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut ipsum eget velit dictum euismod.
+  </div>
+</div>
+
+<!-- Z-INDEX -->
+<h2>5. Z-Index Example</h2>
+<div class="z-container">
+  <div class="layer layer1">z-index: 1</div>
+  <div class="layer layer2">z-index: 2</div>
+  <div class="layer layer3">z-index: 3</div>
+</div>
+
+</body>
+</html>

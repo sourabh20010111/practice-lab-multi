@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lists, Tables, Links & Buttons Styling</title>
+<style>
+  /* ---------- LISTS ---------- */
+  .custom-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  .custom-list li {
+    background: lightblue;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .custom-ol {
+    list-style-type: upper-roman;
+    padding-left: 20px;
+  }
+  .custom-ol li {
+    background: lightgreen;
+    margin: 5px 0;
+    padding: 10px;
+  }
+
+  /* ---------- TABLE ---------- */
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  .custom-table th, .custom-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+  }
+  .custom-table th {
+    background-color: #444;
+    color: white;
+  }
+  .custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .custom-table tr:hover {
+    background-color: #ddd;
+  }
+
+  /* ---------- LINKS ---------- */
+  .custom-link {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+  }
+  .custom-link:hover {
+    color: red;
+    text-decoration: underline;
+  }
+  .custom-link:active {
+    color: green;
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .btn-primary {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background-color: navy;
+  }
+  .btn-link {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .btn-link:hover {
+    background-color: darkorange;
+  }
+</style>
+</head>
+<body>
+
+<h2>Styled Unordered List</h2>
+<ul class="custom-list">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+
+<h2>Styled Ordered List</h2>
+<ol class="custom-ol">
+  <li>Frontend</li>
+  <li>Backend</li>
+  <li>Database</li>
+</ol>
+
+<h2>Styled Table</h2>
+<table class="custom-table">
+  <tr>
+    <th>Name</th>
+    <th>Role</th>
+    <th>Location</th>
+  </tr>
+  <tr>
+    <td>Sourabh</td>
+    <td>Tester</td>
+    <td>India</td>
+  </tr>
+  <tr>
+    <td>Amit</td>
+    <td>Developer</td>
+    <td>USA</td>
+  </tr>
+</table>
+
+<h2>Styled Links</h2>
+<a href="#" class="custom-link">Visit Google</a>
+
+<h2>Styled Buttons</h2>
+<button class="btn-primary">Click Me</button>
+<a href="#" class="btn-link">Learn More</a>
+
+<!-- This covers:
+Removing underline from links
+Adding hover and active states
+Styling real buttons and making links look like buttons -->
+
+</body>
+</html>
